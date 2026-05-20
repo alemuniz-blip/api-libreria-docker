@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS detalle_compra;
+DROP TABLE IF EXISTS compra;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS users;
