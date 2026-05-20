@@ -8,7 +8,7 @@ import (
 	"rest/dto"
 	"rest/utils"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 func main() {
@@ -17,6 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error, no se puede cargar la configuración", err)
 	}
+	config.DBDriver = "postgres"
 	conn, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {
 		log.Fatal("Error, no se pudo conectar a la base de datos", err)
